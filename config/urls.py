@@ -24,5 +24,6 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('livescore.urls', namespace='livescore')),
+    path('', include('wildstat.urls', namespace='wildstat')),
+    path('', include('livescore.urls', namespace='livesccore')),
 ]

@@ -7,7 +7,7 @@ from django.apps import apps
 from django.utils.translation import gettext_lazy as _
 
 
-class Result(models.Model):
+class Match(models.Model):
     """
         Результат
     """
@@ -63,7 +63,7 @@ class Result(models.Model):
     )
 
     class Meta:
-        db_table = 'result'
+        db_table = 'livescore_match'
         verbose_name = _('Результат')
         verbose_name_plural = _('Результаты')
 

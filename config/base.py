@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     'requests',
 
     # project apps
+    'apps.wildstat',
     'apps.livescore',
 ]
 

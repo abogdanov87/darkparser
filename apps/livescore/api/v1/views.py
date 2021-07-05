@@ -1,4 +1,4 @@
-from apps.livescore.models import Result
+from apps.livescore.models import Match
 from rest_framework import generics, permissions, status
 from rest_framework_bulk import ListBulkCreateUpdateAPIView
 from rest_framework.views import APIView
@@ -18,24 +18,24 @@ import hashlib
 from transliterate import translit
 
 from apps.livescore.models import (
-    Result,
+    Match,
 )
 from .serializers import (
-    ResultSerializer,
+    MatchSerializer,
 )
 from .parsers import (
     get_match_results,
 )
 
 
-class ResultAPIView(generics.ListAPIView):
-    queryset = Result.objects.all()
-    serializer_class = ResultSerializer
+class MatchAPIView(generics.ListAPIView):
+    queryset = Match.objects.all()
+    serializer_class = MatchSerializer
     permission_classes = [permissions.AllowAny]
 
     def get(self, request, format=None):
         response = get_match_results(request.GET['url'])
-        return Response(ResultSerializer(
+        return Response(MatchSerializer(
             response,
             many=True
         ).data)

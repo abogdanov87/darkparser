@@ -7,8 +7,8 @@ app_name = apps.LivescoreConfig.name
 
 urlpatterns = [
     url(
-        r'^api/v1/results/$',
-        api_v1_views.ResultAPIView.as_view(),
+        r'^api/v1/livescore/results/$',
+        api_v1_views.MatchAPIView.as_view(),
         name='get results',
     ),
 ]

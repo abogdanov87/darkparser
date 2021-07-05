@@ -1,14 +1,14 @@
 from rest_framework import serializers
 from rest_framework_bulk import BulkListSerializer, BulkSerializerMixin
 from apps.livescore.models import (
-    Result,
+    Match,
 )
 
 
-class ResultSerializer(serializers.ModelSerializer):
+class MatchSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = Result
+        model = Match
         fields = (
             'id',
             'tour',
