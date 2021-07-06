@@ -4,8 +4,9 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     '37.140.192.51',
-    'darkparser.ru',
-    'www.darkparser.ru',
+    '37.140.192.74',
+    'darkpars.ru',
+    'www.darkpars.ru',
 ]
 
 MIDDLEWARE += [
@@ -15,14 +16,14 @@ MIDDLEWARE += [
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'u1344503_default',
-        'USER': 'u1344503_default',
-        'PASSWORD': 'N_7Q2iDd',
+        'NAME': 'u1027973_default',
+        'USER': 'u1027973_default',
+        'PASSWORD': 'w!d3MAwv',
         'HOST': 'localhost',
     }
 }
 
-BASE_URL = 'https://www.darkparser.ru'
+BASE_URL = 'http://www.darkpars.ru'
 LOGIN_FORM_URL = BASE_URL + '/admin/json/api-auth/login/'
 HOME_FORM_URL = BASE_URL + '/#/'
 

@@ -11,6 +11,7 @@ class MatchSerializer(serializers.ModelSerializer):
         model = Match
         fields = (
             'id',
+            'match_link',
             'tour',
             'match_date',
             'match_time',

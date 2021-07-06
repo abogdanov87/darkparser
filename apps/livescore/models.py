@@ -11,6 +11,11 @@ class Match(models.Model):
     """
         Результат
     """
+    match_link = models.CharField(
+        _('Ссылка'),
+        max_length=255,
+        blank=True, null=True,
+    )
     tour = models.CharField(
         _('Стадия'),
         max_length=255,
@@ -44,14 +49,12 @@ class Match(models.Model):
     home_team_id = models.CharField(
         _('ID команды 1'),
         max_length=255,
-        blank=False, null=False,
-        default='',
+        blank=True, null=True,
     )
     away_team_id = models.CharField(
         _('ID команды 2'),
         max_length=255,
-        blank=False, null=False,
-        default='',
+        blank=True, null=True,
     )
     home_team_score_ft = models.IntegerField(
         _('Голы команды 1'),
