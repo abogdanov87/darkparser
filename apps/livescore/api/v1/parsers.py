@@ -3,12 +3,17 @@ from bs4 import BeautifulSoup
 import requests
 import time
 import re
+from config.settings import SERVER
     
 
 def get_match_results(url, delay=0):
     results = []
     try:
-        driver = webdriver.Safari()
+        driver = None
+        if SERVER == 'DEVELOP':
+            driver = webdriver.Safari()
+        else:
+            driver = webdriver.Chrome('http://darkpars.ru/chromedriver')
         driver.get(url)
         container = driver.find_element_by_id('live-table')
         content = BeautifulSoup(container.get_attribute('innerHTML'), 'html.parser')
