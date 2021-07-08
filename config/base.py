@@ -57,7 +57,7 @@ INSTALLED_APPS = [
     'simple_history',
     'bs4',
     'requests',
-    'phantomjs',
+    'chromedriver_py',
 
     # project apps
     'apps.wildstat',
