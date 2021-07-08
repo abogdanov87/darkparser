@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'simple_history',
     'bs4',
     'requests',
+    'phantomjs',
 
     # project apps
     'apps.wildstat',
